@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}*/
+
+.p-body{
+    background-color:white;
+}
+
+.layoutb {
+    /* margin-bottom: 60px;*/
+    background-image: url(../images/healthcare.jpg);
+   
+}
+
+.navbar {
+    background-color: #1E90FF;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color:white;
+   
+}
+
+.btn {
+    background-color: white;
+    color: #1E90FF;
+  
+}
+
+.d-flex .form-control {
+    border-radius: 5px;
+  
+}
+
+.carousel-inner {
+    margin-top: 20%;
+   
+}
+
+.carousel-caption {
+    margin-top:20px;
+}
+
+h1{
+    margin-top:10%;
+}
+#content{
+    margin-top:10%;
+    display:flex;
+    justify-content:center;
+}
+#add {
+   
+    height: 600px;
+    margin-top: 13%;
+  
+    display: flex;
+    justify-content: center;
+}
+
+#add form {
+    text-align:center
+}
+
+    #add form input {
+        margin-top: 20px;
+        border-bottom: solid #1E90FF;
+        font-family: 'Hedvig Letters Serif', serif;
+    }
+.fa-user-doctor {
+    font-size: 50px;
+    color: #1E90FF;
+}
+
+
+.form-group .btn {
+    width:150px;
+}
+
+
+
+
+.container_d {
+    display: flex;
+    justify-content: center;
+}
+
+.doctor_card {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 200px;
+    background-color: #1E90FF;
+    margin-top: 7%;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.d_image img {
+    width: 100px;
+    height: 120px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.d_formation {
+    display: block;
+    margin-top: 30px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.container_d {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.doctor-card {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E90FF;
+    width: 70%;
+    height: 190px;
+    padding:10px;
+}
+
+    .doctor-card .d-image {
+        background-color: blue;
+        width: 140px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+        
+
+    }
+
+.doc-info {
+    display: flex;
+}
+
+    .doc-info .name {
+        margin-top: 18.5px;
+    }
+
+.doctor-card .d-image img {
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.doc-info1 {
+    display: block;
+}
+
+.name {
+    width: 500px;
+    height: 50px;
+    background-color: rgb(53, 53, 218);
+    display: block;
+}
+
+    .name span {
+        font-weight: bold;
+    }
+
+.information {
+    display: flex;
+    justify-content: space-around;
+}
+
+    .information .info-item {
+        width: 200px;
+        display: block;
+    }
+
+
+/*    ------------------------------------------------------------------------------------------------------------------------------------*/
+.container_a {
+    display: flex;
+    justify-content: center;
+}
+
+.action {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+    .action .action-item {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+      
+       
+        border-radius: 10px;
+    }
+
+        .action .action-item:hover {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            transition-duration: 2s;
+            font-size: 90px;
+        }
+
+
+
+        .action .action-item a {
+            color: black;
+            margin-top: 10px;
+        }
+
+            .action .action-item a span {
+                font-size: 60px;
+            }
+
+.table {
+    color: white;
+    margin-top: 7%;
+    border-left: solid white;
+    border-right: solid white;
+    font-family: 'Hedvig Letters Serif', serif;
+    background-color: #1E90FF;
+}
+
+.table  tr {
+    align-content:center;
+}

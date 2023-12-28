@@ -1,0 +1,54 @@
+﻿@model Hospital_Randevu.Models.Doctor
+
+@{
+    ViewData["Title"] = "DeleteDoctor";
+}
+
+<div class="container_d">
+
+    <div class="doctor-card">
+
+        <div class="doc-info">
+
+            <div class="d-image">
+                <img src="../images/@Html.DisplayFor(modelItem => Model.image)" style="width:120px ; height:120px " />
+            </div>
+
+            <div class="doc-info1">
+                <div class="name">
+                    <p for="">Dr. <br><span>@Model.FullName</span></p>
+
+                </div>
+
+                <div class="information">
+
+                    <div class="info-item">
+                        <p>Specialty</p>
+                        <hr>
+                        <label for="">@Model.specialty</label>
+                    </div>
+
+                    <div class="info-item">
+                        <p>Contacts</p>
+                        <hr>
+                        <p>+90  @Model.PhoneNumber</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+    <form asp-action="DeleteDoctor">
+        <input type="hidden" asp-for="DoctorID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+       
+    </form>
+</div>

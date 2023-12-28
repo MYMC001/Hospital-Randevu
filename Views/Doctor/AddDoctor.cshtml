@@ -1,0 +1,56 @@
+﻿@model Hospital_Randevu.DoctorPreview
+
+
+
+
+<div class="row"   id="add">
+    <div class="col-md-4">
+       
+        <form asp-action="AddDoctor"  enctype="multipart/form-data">
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+               
+                <input asp-for="FullName" class="form-control"    placeholder="Full Name"/>
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              
+                <input asp-for="specialty" class="form-control" placeholder="Spaciaty" />
+                <span asp-validation-for="specialty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                <input asp-for="Office" class="form-control" placeholder="Office" />
+                <span asp-validation-for="Office" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              
+                <input asp-for="Photo" class="form-control" placeholder="Upload Image" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+             
+                <input asp-for="age" class="form-control" placeholder="Age" />
+                <span asp-validation-for="age" class="text-danger"    ></span>
+            </div>
+            <div class="form-group">
+             
+                <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
