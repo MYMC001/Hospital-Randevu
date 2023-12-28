@@ -242,6 +242,7 @@ h1{
     background-color: #1E90FF;
 }
 
-.table  tr {
-    align-content:center;
+.table  tbody tr {
+    border-bottom:blue solid;
+    
 }
