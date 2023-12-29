@@ -34,11 +34,13 @@ html {
     color:white;
    
 }
+.dropdown-menu {
+    background-color: #1E90FF;
+}
 
 .btn {
     background-color: white;
     color: #1E90FF;
-  
 }
 
 .d-flex .form-control {

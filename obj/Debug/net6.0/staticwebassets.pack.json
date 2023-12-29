@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Hospital_Randevu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\Style.css",
+      "PackagePath": "staticwebassets\\css\\Style.css"
+    },
+    {
       "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

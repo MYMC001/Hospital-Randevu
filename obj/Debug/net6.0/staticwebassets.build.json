@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hzWUYsQ7xbY0EY1TZZsNn6mu3oKY6Kpr5E93Tc8DaVg=",
+  "Hash": "jra3tKbO+FEcVrfu17nYsdgRJY9CrLSoPxNqkiq3gdI=",
   "Source": "Hospital_Randevu",
   "BasePath": "_content/Hospital_Randevu",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\Style.css",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "css/Style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Style.css"
     },
     {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\favicon.ico",

@@ -9,7 +9,6 @@ builder.Services.AddDbContext<HospitalDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("HospitalConnection"));
 });
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 
 var app = builder.Build();
@@ -31,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Doctor}/{action=AddDoctor}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
