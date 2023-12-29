@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Hospital_Randevu.Models.DoctorWorkTime>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartHour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndHour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkDaysFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkDaysTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor.FullName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartHour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndHour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkDaysFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkDaysTo)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.FullName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DoctorWorkTimeID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DoctorWorkTimeID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DoctorWorkTimeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -14,7 +14,7 @@ namespace Hospital_Randevu
         public string? specialty { get; set; }
 
        
-        public string? Office { get; set; }
+        public string? Section { get; set; }
 
         
         public int age { get; set; }

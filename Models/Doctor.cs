@@ -20,10 +20,10 @@ namespace Hospital_Randevu.Models
         [StringLength(100)]
         public string? specialty { get; set; }
 
-        [Display(Name = "Office")]
-        [Required(ErrorMessage = "Doctor Office  required")]
+        [Display(Name = "Section")]
+        [Required(ErrorMessage = "Doctor Section  required")]
         [StringLength(200)]
-        public string? Office { get; set; }
+        public string? Section { get; set; }
 
 
         [Display(Name = "image")]
@@ -39,6 +39,10 @@ namespace Hospital_Randevu.Models
         [Display(Name = "PhoneNumber")]
         [Required(ErrorMessage = "Doctor PhoneNumber  required")]
         public string? PhoneNumber { get; set; }
+
+       
+
+        public ICollection<Patient>? Patients { get; set; }  
 
 
 

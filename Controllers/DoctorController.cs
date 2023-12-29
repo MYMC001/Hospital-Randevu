@@ -61,7 +61,7 @@ namespace Hospital_Randevu.Controllers
                 DoctorID = doctor.DoctorID,
                 FullName = doctor.FullName,
                 specialty = doctor.specialty,
-                Office = doctor.Office,
+                Section = doctor.Section,
                 image = filename,
                 age = doctor.age,
                 PhoneNumber=doctor.PhoneNumber

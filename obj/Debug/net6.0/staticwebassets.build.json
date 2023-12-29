@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0bjKY52Vzm8ts6Fll0jRupDWHsqjZQG5VQ95honsxsI=",
+  "Hash": "hzWUYsQ7xbY0EY1TZZsNn6mu3oKY6Kpr5E93Tc8DaVg=",
   "Source": "Hospital_Randevu",
   "BasePath": "_content/Hospital_Randevu",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\1c578ee5-716e-44f5-b6b5-f598d399b4a0 WIN_20231206_21_11_05_Pro.mp4",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "images/1c578ee5-716e-44f5-b6b5-f598d399b4a0 WIN_20231206_21_11_05_Pro.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1c578ee5-716e-44f5-b6b5-f598d399b4a0 WIN_20231206_21_11_05_Pro.mp4"
     },
     {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\295120d5-3da2-47a7-a1f3-93d672379153 2022-08-08 (5).png",
@@ -245,6 +264,25 @@
       "OriginalItemSpec": "wwwroot\\images\\88422c59-fc47-4db6-aed1-e37ad460237a indir.jpeg"
     },
     {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\8a9c3420-e7ba-4d52-9f4b-a3faf3ef2cf7 WIN_20231206_21_11_05_Pro.mp4",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "images/8a9c3420-e7ba-4d52-9f4b-a3faf3ef2cf7 WIN_20231206_21_11_05_Pro.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8a9c3420-e7ba-4d52-9f4b-a3faf3ef2cf7 WIN_20231206_21_11_05_Pro.mp4"
+    },
+    {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\b456efd8-b9ed-4874-b1c8-bced75c9fc4c img_saulogo.png",
       "SourceId": "Hospital_Randevu",
       "SourceType": "Discovered",
@@ -319,6 +357,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\d2c0f543-b8c6-4138-89ab-b05fc8f05dc1 2022-12-26 (7).png"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\dc973409-8888-42bd-a2bf-0168ea456c75 2022-07-24.png",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "images/dc973409-8888-42bd-a2bf-0168ea456c75 2022-07-24.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dc973409-8888-42bd-a2bf-0168ea456c75 2022-07-24.png"
     },
     {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\ebff4368-3c90-4f8d-b64a-1d8f153cf1bb 2022-07-23.png",

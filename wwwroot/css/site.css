@@ -241,8 +241,24 @@ h1{
     font-family: 'Hedvig Letters Serif', serif;
     background-color: #1E90FF;
 }
+    .table thead tr {
+        border-bottom: red solid;
+    }
 
 .table  tbody tr {
     border-bottom:blue solid;
     
 }
+
+.work {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+.work form {
+    text-align:center;
+}
+    .work form .form-group{
+        margin-top:20px;
+    }

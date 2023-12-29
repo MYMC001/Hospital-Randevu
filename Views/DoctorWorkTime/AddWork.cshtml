@@ -1,0 +1,59 @@
+﻿@model Hospital_Randevu.Models.DoctorWorkTime
+
+
+<div class="work row">
+   
+    <div class="col-md-4">
+        <form asp-action="AddWork">
+            <span class="material-symbols-outlined" style="font-size:50px ; color:#1E90FF">
+                pending_actions
+            </span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+             
+                <input asp-for="StartHour" class="form-control" placeholder="StartHour" />
+                <span asp-validation-for="StartHour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              
+                <input asp-for="EndHour" class="form-control" placeholder="EndHour" />
+                <span asp-validation-for="EndHour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <input asp-for="WorkDaysFrom" class="form-control" placeholder="WorkDaysFrom" />
+                <span asp-validation-for="WorkDaysFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <input asp-for="WorkDaysTo" class="form-control" placeholder="WorkDaysTo" />
+                <span asp-validation-for="WorkDaysTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                <select asp-for="DoctorID" class ="form-control" asp-items="ViewBag.DoctorID">
+                    <option   selected disabled>Select Doctor</option>
+
+                    @foreach (var item in ViewBag.getwork)
+                    {
+                        <option value="@item.DoctorID">@item.FullName</option>
+                    }
+                </select>
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+           
+        </form>
+      
+    </div>
+</div>
+
+<div>
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

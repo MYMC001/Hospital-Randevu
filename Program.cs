@@ -9,6 +9,8 @@ builder.Services.AddDbContext<HospitalDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("HospitalConnection"));
 });
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 
 var app = builder.Build();
 
