@@ -1,5 +1,13 @@
 ﻿@model IEnumerable<Hospital_Randevu.Models.Doctor>
 
+    <div  class="search"  style="margin-top:10%;">
+    @using (Html.BeginForm("ListDoctors", "Doctor", FormMethod.Get))
+    {
+        @Html.TextBox("search")
+        <input type="submit" value="Search" style=" font-family: 'Hedvig Letters Serif', serif; background-color: #1E90FF;; color:white;width:200px ;border:none ; height:30px;" />
+    }
+    </div>
+
 <table class="table">
     <thead>
         <tr>
@@ -26,6 +34,14 @@
         </tr>
     </thead>
     <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="3"  style="color:red">
+                    Data Do not found
+                </td>
+            </tr>
+        }
 @foreach (var item in Model) {
         <tr>
                 <td>

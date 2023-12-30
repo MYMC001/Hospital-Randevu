@@ -23,29 +23,93 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container">
-            <a class="navbar-brand" href="#"><img src="~/images/central.png" /></a>
 
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-  </div>
-</nav>
 
-   
-    <div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"  style="padding-top:12px;"><img src="~/images/central.png" /></a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link " href="#">
+                    Appointment
+                    <span class="material-symbols-outlined">
+                        clinical_notes
+                    </span>
+             
+                </a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Doctor<span class="material-symbols-outlined">
+                        stethoscope
+                    </span>
+                </a>
+            </li>
+          @*   <li class="nav-item">
+                <a class="nav-link " href="#" ></a>
+            </li> *@
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Profile<span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div   class="btn-tugle">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">
+                                Appointment
+                                <span class="material-symbols-outlined">
+                                    clinical_notes
+                                </span>
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Doctor<span class="material-symbols-outlined">
+                                    stethoscope
+                                </span>
+                            </a>
+                        </li>
+                        @*   <li class="nav-item">
+                        <a class="nav-link " href="#" ></a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Profile<span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+          </div>
+       
+        
+        </div>
+        
+
+
+        <div>
         @RenderBody()
     </div>
 

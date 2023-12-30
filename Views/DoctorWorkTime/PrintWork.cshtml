@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Hospital_Randevu.Models.DoctorWorkTime>
 
-<table class="table">
+<table class="table"  id="linear">
     <thead>
         <tr>
             <th>
@@ -40,9 +40,15 @@
                     @Html.DisplayFor(modelItem => item.Doctor.FullName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.DoctorWorkTimeID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DoctorWorkTimeID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DoctorWorkTimeID">Delete</a>
+                    <button><a class="cancel" asp-action="Delete" asp-route-id="@item.DoctorWorkTimeID"><span class="material-symbols-outlined">cancel </span>Cancel</a></button>
+
+            </td>
+
+            <td>
+
+                    <button><a class="edit" asp-action="Edit" asp-route-id="@item.DoctorWorkTimeID"><span class="material-symbols-outlined">Edit</span>Edit</a></button>
+
+
             </td>
         </tr>
 }

@@ -37,6 +37,9 @@ html {
 .dropdown-menu {
     background-color: #1E90FF;
 }
+.nav-link {
+    color:white;
+}
 
 .btn {
     background-color: white;
@@ -264,3 +267,35 @@ h1{
     .work form .form-group{
         margin-top:20px;
     }
+
+
+td .cancel {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    color:black;
+}
+
+td .edit {
+    display: flex;
+    text-decoration: none;
+    color:black;
+   
+}
+
+td button {
+    display:flex;
+    justify-content:center;
+    width:150px;
+    background-color:white;
+    border:none;
+    border-radius:6px;
+    border-bottom:solid blue;
+   
+}
+
+#linear{
+    opacity:10;
+}
+

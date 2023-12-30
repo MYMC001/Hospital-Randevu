@@ -14,10 +14,13 @@ namespace Hospital_Randevu.Controllers
             hostingenvironment = getphoto;
         }
 
-        public IActionResult ListDoctors()
+        public IActionResult ListDoctors(string search)
         {
-            return View(_context.Doctors.ToList());
+         
+            return View(_context.Doctors.Where(x => x.specialty.Contains(search) || search == null|| x.FullName.Contains(search)).ToList());
         }
+
+       
         public IActionResult AddDoctor()
         {
             return View();

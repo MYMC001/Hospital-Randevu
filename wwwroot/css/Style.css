@@ -1,20 +1,89 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+body {
+    background-image: linear-gradient(rgb(0,0,0,0.40),rgb(0,0,0,0.40)),url(../images/medical.jpg);
+    background-size: cover;
+   
+}
+.container-fluid {
+  
+  
+   display:flex;
+    justify-content: space-around;
+    border-bottom:solid black
 }
 
 
-
-
-
-.navbar {
-    background-color: #1E90FF;
-    font-family: 'Hedvig Letters Serif', serif;
-    border-bottom: solid blue;
+.center {
+    margin-top:15%;
+   
+    height:100px;
 }
-    .navbar .nav .nav-item {
-        border-bottom: solid black;
-    }
-    .navbar .nav .nav-item a {
+
+    .center h1 {
+        text-align: center;
         color: white;
-        font-size: 20px;
-       
+        font-family: 'Hedvig Letters Serif', serif;
     }
+    .center p {
+        text-align: center;
+        color: white;
+        font-family: 'Hedvig Letters Serif', serif;
+    }
+
+.btn-tugle {
+    padding-top:10px;
+    
+}
+
+
+    .btn span {
+        color: white;
+        font-size: 40px;
+    }
+.btn{
+    outline-color:none;
+  
+}
+.offcanvas {
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+#carouselExampleIndicators {
+    margin-top: 15%;
+    width:400px;
+    height:300px;
+    display:flex;
+}
+
+.nav-link {
+    display:flex;
+   
+}
+
+    /*.nav-link .material-symbols-outlined {
+       
+       
+        color: #1E90FF
+    }
+*/
+.nav {
+    padding-top: 17px;
+}
+    .nav .nav-item{
+        margin-left:10px;
+    }
+    .nav .nav-item .nav-link {
+        color: white;
+        display: flex;
+        font-family: 'Hedvig Letters Serif', serif;
+    }
+
+
+.offcanvas-body .nav .nav-item .nav-link {
+    color: black;
+    display: flex;
+    font-family: 'Hedvig Letters Serif', serif;
+}
