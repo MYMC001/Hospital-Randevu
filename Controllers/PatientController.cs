@@ -13,6 +13,8 @@ namespace Hospital_Randevu.Controllers
             _context = context;
 
         }
+
+       
         public IActionResult AddPatient()
         {
             return View();
@@ -29,5 +31,9 @@ namespace Hospital_Randevu.Controllers
 
             return RedirectToAction(nameof(AddPatient));
         }
+
+
+
+       
     }
 }

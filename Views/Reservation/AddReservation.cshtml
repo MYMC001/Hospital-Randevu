@@ -1,0 +1,41 @@
+﻿@model Hospital_Randevu.Models.Reservation
+
+@{
+    ViewData["Title"] = "AddReservation";
+    Layout = "_UserLayout";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddReservation">
+            <span class="material-symbols-outlined">
+                clinical_notes
+            </span>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+             
+                <select asp-for="PatientID" class ="form-control" asp-items="ViewBag.PatientID"></select>
+            </div>
+            <div class="form-group">
+               
+                <select asp-for="DoctorID" class ="form-control" asp-items="ViewBag.DoctorID"></select>
+            </div>
+            <div class="form-group">
+              
+                <input asp-for="ReservationDate" class="form-control" />
+                <span asp-validation-for="ReservationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

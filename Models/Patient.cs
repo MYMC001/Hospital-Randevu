@@ -25,9 +25,7 @@ namespace Hospital_Randevu.Models
         [Required(ErrorMessage = "Patient Gender  required")]
         public   string? Gender { get; set; }
 
-        [Display(Name = "Password Name ")]
-        [Required(ErrorMessage = "Password Gender  required")]
-        public int? Password { get; set; }
+     
 
         [Display(Name = "Patient Name ")]
         [Required(ErrorMessage = "Patient Phone  required")]

@@ -87,3 +87,29 @@ body {
     display: flex;
     font-family: 'Hedvig Letters Serif', serif;
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.row form {
+
+    text-align:center;
+
+}
+    .row form .form-group{
+        margin-top:10px;
+    }
+
+
+    .row form .form-group .btn {
+        width:150px;
+    }
+
+.row span {
+    font-size:40px;
+    color:white;
+}

@@ -41,7 +41,7 @@
            
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    Doctor<span class="material-symbols-outlined">
+                    Doctors<span class="material-symbols-outlined">
                         stethoscope
                     </span>
                 </a>
@@ -49,6 +49,14 @@
           @*   <li class="nav-item">
                 <a class="nav-link " href="#" ></a>
             </li> *@
+           
+            <li class="nav-item">
+                <a class="nav-link"  asp-controller="Patient"   asp-action="AddPatient">
+                    SaveInfo<span class="material-symbols-outlined">
+                        Save
+                    </span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     Profile<span class="material-symbols-outlined">
@@ -71,7 +79,7 @@
                 <div class="offcanvas-body">
                     
                     <ul class="nav flex-column">
-                        <li class="nav-item">
+                       @*  <li class="nav-item">
                             <a class="nav-link " href="#">
                                 Appointment
                                 <span class="material-symbols-outlined">
@@ -88,9 +96,7 @@
                                 </span>
                             </a>
                         </li>
-                        @*   <li class="nav-item">
-                        <a class="nav-link " href="#" ></a>
-                        </li> *@
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 Profile<span class="material-symbols-outlined">
@@ -98,6 +104,14 @@
                                 </span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Profile<span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </a>
+                        </li> *@
+                       
                     </ul>
                 </div>
                

@@ -1,0 +1,60 @@
+﻿@model Hospital_Randevu.Models.Patient
+
+@{
+  
+    Layout = "_UserLayout";
+}
+
+
+
+    <div class="row">
+    <hr />
+        <div class="col-md-4">
+            <form asp-action="AddPatient">
+            <span class="material-symbols-outlined">
+                personal_injury
+            </span>
+           
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+
+                    <input asp-for="PatientName" class="form-control"   placeholder="Name"/>
+                    <span asp-validation-for="PatientName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                <input asp-for="PatientSername" class="form-control" placeholder="LastName" />
+                    <span asp-validation-for="PatientSername" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                <input asp-for="BirthDay" class="form-control" placeholder="Birth Day" />
+                    <span asp-validation-for="BirthDay" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                <input asp-for="Gender" class="form-control" placeholder="Gender" />
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                <input asp-for="Phone" class="form-control" placeholder="Phone Number" />
+                    <span asp-validation-for="Phone" class="text-danger" ></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+                <hr />
+            </form>
+        </div
+         <hr />
+
+    </div>
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
