@@ -20,7 +20,7 @@ namespace Hospital_Randevu.Models
         public string? WorkDaysFrom { get; set; }
 
         [Display(Name = "WorkDaysFrom")]
-        [Required(ErrorMessage = "Doctor WorkDays  required")]
+        [Required(ErrorMessage = "Doctor WorkDays ")]
         public string? WorkDaysTo { get; set; }
         public int DoctorID { get; set; }
         public Doctor? Doctor { get; set; }  

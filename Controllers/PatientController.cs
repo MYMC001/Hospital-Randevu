@@ -14,8 +14,13 @@ namespace Hospital_Randevu.Controllers
 
         }
 
-       
-        public IActionResult AddPatient()
+
+        public IActionResult Doctors()
+        {
+            var fetch = _context.Doctors.ToList();
+            return View(fetch);
+        }
+        public IActionResult  AddPatient()
         {
             return View();
         }

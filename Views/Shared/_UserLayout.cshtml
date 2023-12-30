@@ -31,19 +31,21 @@
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link " href="#">
-                    Appointment
                     <span class="material-symbols-outlined">
                         clinical_notes
                     </span>
+                    Appointment
+                   
              
                 </a>
             </li>
            
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Doctors<span class="material-symbols-outlined">
+                <a class="nav-link"  asp-action="Doctors"   asp-controller="Patient">
+                    <span class="material-symbols-outlined">
                         stethoscope
                     </span>
+                    Doctors
                 </a>
             </li>
           @*   <li class="nav-item">
@@ -52,16 +54,18 @@
            
             <li class="nav-item">
                 <a class="nav-link"  asp-controller="Patient"   asp-action="AddPatient">
-                    SaveInfo<span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined">
                         Save
                     </span>
+                    SaveInfo
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    Profile<span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined">
                         account_circle
                     </span>
+                    Profile
                 </a>
             </li>
         </ul>
