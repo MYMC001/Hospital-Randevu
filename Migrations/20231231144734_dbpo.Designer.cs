@@ -3,6 +3,7 @@ using System;
 using Hospital_Randevu.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HospitalRandevu.Migrations
 {
     [DbContext(typeof(HospitalDbContext))]
-    partial class HospitalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231231144734_dbpo")]
+    partial class dbpo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,29 +96,6 @@ namespace HospitalRandevu.Migrations
                     b.ToTable("DoctorWorkTimes");
                 });
 
-            modelBuilder.Entity("Hospital_Randevu.Models.Employee", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
-
-                    b.Property<int>("EmployeeEmail")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Employeename")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Employees");
-                });
-
             modelBuilder.Entity("Hospital_Randevu.Models.Reservation", b =>
                 {
                     b.Property<int>("reservationID")
@@ -148,11 +128,6 @@ namespace HospitalRandevu.Migrations
 
                     b.Property<DateOnly>("BirthDay")
                         .HasColumnType("date");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
 
                     b.Property<string>("Gender")
                         .IsRequired()

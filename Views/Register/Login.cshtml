@@ -14,7 +14,7 @@
 	<div class="login">
 
 		<div class="clinic">
-			<div class="logo"><img src="./images/central.png" alt=""></div>
+			<div class="logo"><img src="../images/central.png" alt=""></div>
 			<div class="select">
 				<select name="" id="">
 					<option value="">En<img src="./Flag_of_the_United_Kingdom_(1-2).svg" alt=""></option>
@@ -26,25 +26,33 @@
 		<div class="logUser">
 			<div class="col-md-4">
 				<p style="color:red">@ViewBag.err</p>
-				<form   asp-action="Login"   asp-controller="Register">
+				<form asp-action="Login">
+					
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 					<div class="form-item">
-						<span class="material-symbols-outlined">
-							account_circle
-						</span><input type="text" name="" id="" placeholder="UserSurname"  asp-for="UserSurname">
+						<span class="material-symbols-outlined">account_circle</span>
+						<input type="text" name="Email" placeholder="Email" asp-for="Email">
+						@* <span asp-validation-for="Email" class="text-danger"></span> *@
 					</div>
+
+
+
 					<div class="form-item">
-						<span class="material-symbols-outlined">
-							key
-						</span><input type="text" placeholder="Password"  asp-for="Password">
+						
+						<span class="material-symbols-outlined">key</span>
+						<input type="password" name="Password" placeholder="Password" asp-for="Password">
+						@* <span asp-validation-for="Password" class="text-danger"></span> *@
 					</div>
 
-					<input type="submit" class="btn" value="Login">
-
-
-
+					
+						<input type="submit" value="Login" class="btn " />
+					
 				</form>
-				<button class="btnUp"><a   asp-action="LogUp"  asp-controller="Login">LogUp</a></button>
+				<button class="btnUp"><a asp-action="LogUp" asp-controller="Register">LogUp</a></button>
+			
+				
+ 
 			</div>
 		</div>
 

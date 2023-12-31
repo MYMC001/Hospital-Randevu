@@ -3,6 +3,7 @@ using System;
 using Hospital_Randevu.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HospitalRandevu.Migrations
 {
     [DbContext(typeof(HospitalDbContext))]
-    partial class HospitalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231231145813_dbpopoi")]
+    partial class dbpopoi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,29 +94,6 @@ namespace HospitalRandevu.Migrations
                     b.HasIndex("DoctorID");
 
                     b.ToTable("DoctorWorkTimes");
-                });
-
-            modelBuilder.Entity("Hospital_Randevu.Models.Employee", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
-
-                    b.Property<int>("EmployeeEmail")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Employeename")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Hospital_Randevu.Models.Reservation", b =>

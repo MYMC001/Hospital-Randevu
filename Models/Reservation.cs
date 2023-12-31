@@ -22,7 +22,6 @@ namespace Hospital_Randevu.Models
         public DateTime ReservationDate { get; set; }
 
 
-        public Doctor? Doctor { get; set; }
-        public User? Patient { get; set; }
+       
     }
 }

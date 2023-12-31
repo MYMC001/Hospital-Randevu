@@ -54,16 +54,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acer/source/repos/Hospital_Randevu/Hospital_Randevu/Views/Patient/Doctors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxEb2N0b3JzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/acer/source/repos/Hospital_Randevu/Hospital_Randevu/Views/Register/Doctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcRG9jdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acer/source/repos/Hospital_Randevu/Hospital_Randevu/Views/Register/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+[C:/Users/acer/source/repos/Hospital_Randevu/Hospital_Randevu/Views/Register/Indexer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXhlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/acer/source/repos/Hospital_Randevu/Hospital_Randevu/Views/Register/Login.cshtml]

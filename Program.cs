@@ -26,12 +26,13 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
 app.UseAuthorization();
 app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Register}/{action=LogUp}/{id?}");
+    pattern: "{controller=Doctor}/{action=AddDoctor}/{id?}");
 
 app.Run();

@@ -15,8 +15,12 @@ namespace Hospital_Randevu.Models
         [Display(Name = " sername ")]
         [Required(ErrorMessage = " sername  required")]
         [StringLength(200)]
+		public string Email { get; set; }
+		[Display(Name = " Email ")]
+		[Required(ErrorMessage = " Email required")]
+		[StringLength(200)]
 
-        public string UserSurname { get; set;}
+		public string UserSurname { get; set;}
         [Display(Name = "birthday ")]
         [Required(ErrorMessage = " Birth day  required")]
         public DateOnly  BirthDay { get; set; }
@@ -34,6 +38,6 @@ namespace Hospital_Randevu.Models
         [Required(ErrorMessage = " Phone  required")]
         public   string Phone { get; set; }    
 
-        public ICollection<Reservation>? Reservations { get; set; }  
+      
     }
 }

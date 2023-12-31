@@ -15,18 +15,18 @@ namespace Hospital_Randevu.Controllers
             _context = context;
         }
 
-        public IActionResult Doctors()
-        {
-            var fetch = _context.Doctors.ToList();
-            return View(fetch);
-        }
+        //public IActionResult Doctors()
+        //{
+        //    var fetch = _context.Doctors.ToList();
+        //    return View(fetch);
+        //}
 
         public IActionResult LogUp()
         {
             return View();
         }
 
-        public IActionResult Index()
+        public IActionResult Indexer()
         {
             return View();
         }
@@ -46,19 +46,20 @@ namespace Hospital_Randevu.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(User user)
-        {
-            var check = _context.Users.Where(x => x.UserSurname == user.UserSurname && x.Password == user.Password).FirstOrDefault();
-            if (check != null)
-            {
+		public IActionResult Login(User user)
+		{
+			var check = _context.Users.Where(x => x.Email == user.Email && x.Password == user.Password).FirstOrDefault();
+			if (check != null)
+			{
 
-                HttpContext.Session.SetString("UserName", check.UserName);
-                var name = HttpContext.Session.GetString("UserName");
-               
-                return View("Index");
-            }
+				HttpContext.Session.SetString("Username", check.UserName);
+				var name = HttpContext.Session.GetString("Username");
+				ViewBag.Username = name;
+				return View("Indexer");
+			}
             ViewBag.err = "Not Found";
             return View();
-        }
-    }
+		}
+
+	}
 }
