@@ -1,0 +1,172 @@
+﻿header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Icon {
+    background-image: linear-gradient(rgb(0,0,0,0.50),rgb(0,0,0,0.50)),url(../images/Happiest-Parent-and-Child.jpg);
+    background-position: center;
+    width: 743px;
+    height: 727px;
+    border-radius: 10px;
+}
+
+
+
+
+
+.login {
+    width: 45%;
+    height: 727px;
+    display: block;
+}
+
+    .login .clinic {
+        width: 743px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login .logo {
+        width: 321px;
+        padding-top: 15px;
+    }
+
+    .login .gic {
+        width: 321px;
+        display: block;
+        padding-top: 15px;
+    }
+
+.gic span {
+    font-size: 50px;
+    color: black;
+}
+
+.logup {
+    width: 45%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+.logup form .form-group {
+    margin-top: 30px;
+}
+
+    .logup form .form-group input {
+        width: 400px;
+        border-radius: 10px;
+    }
+
+    .logup form .form-group .btn {
+        background-color: #00ffbf;
+        outline: none;
+        border: none;
+        width: 200px;
+        margin-left: 85px;
+    }
+
+.login .form-group span {
+    color: red;
+}
+
+.link-login span {
+    border: solid black;
+    border-radius: 70px;
+    color: black;
+    text-align: center;
+    margin-top: 11px;
+}
+
+.link-login {
+    display: flex;
+    text-decoration: none;
+    padding-top: 15px;
+    border: none;
+    background-color: white;
+}
+
+
+.logUser {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    width: 45%;
+}
+
+    .logUser form {
+        text-align: center;
+        width: 800px;
+    }
+
+        .logUser form .form-item {
+            margin-top: 30px;
+            border: solid black 1px;
+            width: 400px;
+            border-radius: 7px;
+        }
+
+            .logUser form .form-item input {
+                width: 400px;
+                border-radius: 7px;
+                border: none;
+                outline: none;
+            }
+
+
+
+        .logUser form .form-item {
+            display: flex;
+        }
+
+    .logUser .btn {
+        border: none;
+        outline: none;
+        border-radius: 7px;
+        background-color: #00ffbf;
+        outline: none;
+        margin-top: 10px;
+        margin-right: 400px;
+        width: 400px;
+    }
+
+    .logUser .col-md-4 {
+        text-align: center;
+    }
+
+    .logUser .btnUp {
+        width: 400px;
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        border-radius: 7px;
+        background-color: brown;
+        color: white;
+        height: 35px;
+        margin-right: 20px;
+    }
+
+        .logUser .btnUp a {
+            color: white;
+            text-decoration: none;
+        }
+
+.select {
+    padding-top: 10px;
+}
+
+    .select select {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+        .select select option img {
+            width: 10px;
+        }

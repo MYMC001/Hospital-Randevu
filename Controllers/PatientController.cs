@@ -20,22 +20,9 @@ namespace Hospital_Randevu.Controllers
             var fetch = _context.Doctors.ToList();
             return View(fetch);
         }
-        public IActionResult  AddPatient()
-        {
-            return View();
-        }
+      
 
-
-        [HttpPost]
-
-        public async  Task<IActionResult> AddPatient(Patient patient)
-        {
-            _context.Patients.Add(patient);
-            await _context.SaveChangesAsync();
-            ModelState.Clear();
-
-            return RedirectToAction(nameof(AddPatient));
-        }
+       
 
 
 

@@ -7,6 +7,7 @@
     Layout = "_UserLayout";
 }
 
+<body   class="p-body">
     <p> @ViewBag.myname</p>
 
     @foreach (var item in Model)
@@ -68,12 +69,7 @@
 
             </div>
         </div>
-       
-
 
     }
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+</body>
+

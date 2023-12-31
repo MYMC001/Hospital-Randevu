@@ -9,9 +9,12 @@ builder.Services.AddDbContext<HospitalDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("HospitalConnection"));
 });
-
+builder.Services.AddSession();
 
 var app = builder.Build();
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,13 +26,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Reservation}/{action=AddReservation}/{id?}");
+    pattern: "{controller=Register}/{action=LogUp}/{id?}");
 
 app.Run();

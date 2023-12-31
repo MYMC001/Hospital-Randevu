@@ -23,6 +23,6 @@ namespace Hospital_Randevu.Models
 
 
         public Doctor? Doctor { get; set; }
-        public Patient? Patient { get; set; }
+        public User? Patient { get; set; }
     }
 }

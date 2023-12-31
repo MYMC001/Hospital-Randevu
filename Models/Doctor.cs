@@ -42,7 +42,7 @@ namespace Hospital_Randevu.Models
 
        
 
-        public ICollection<Patient>? Patients { get; set; }  
+       
 
 
 

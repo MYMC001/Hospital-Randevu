@@ -1,0 +1,79 @@
+﻿@model Hospital_Randevu.Models.User
+
+@{
+
+	Layout = "_LoginLayout";
+}
+
+
+
+<header>
+
+	<div class="login">
+
+		<div class="clinic">
+			<div class="logo"><img src="./images/central.png" alt=""></div>
+			<div class="gic"><span class="material-symbols-outlined">clinical_notes	</span> </div>
+			<button class="link-login">  <a  asp-action="Login"  asp-controller="Register"><span class="material-symbols-outlined">navigate_before	</span></a> </button>
+		</div>
+		<div class="logup">
+			<div class="col-md-4">
+				<form asp-action="LogUp">
+
+
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class="form-group">
+						<span>*</span><label for="">Name:</label>
+
+						<input asp-for="UserName" class="form-control" placeholder="Name" />
+						<span asp-validation-for="UserName" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<span>*</span><label for="">UserName:</label>
+						<input asp-for="UserSurname" class="form-control" placeholder="LastName" />
+						<span asp-validation-for="UserSurname" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<span>*</span><label for="">Birth Day:</label>
+						<input asp-for="BirthDay" class="form-control" placeholder="Birth Day" />
+						<span asp-validation-for="BirthDay" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<span>*</span><label for="">Gender:</label>
+						<input asp-for="Gender" class="form-control" placeholder="Gender" />
+						<span asp-validation-for="Gender" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<span>*</span><label for="">Phone:</label>
+						<input asp-for="Phone" class="form-control" placeholder="Phone Number" />
+						<span asp-validation-for="Phone" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<span>*</span><label for="">Password:</label>
+						<input asp-for="Password" class="form-control" placeholder="Password" />
+						<span asp-validation-for="Password" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Forward >" class="btn btn-primary" />
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="Icon">
+	</div>
+
+</header>
+
+
+
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

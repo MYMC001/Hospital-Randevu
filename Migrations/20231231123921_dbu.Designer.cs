@@ -3,6 +3,7 @@ using System;
 using Hospital_Randevu.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HospitalRandevu.Migrations
 {
     [DbContext(typeof(HospitalDbContext))]
-    partial class HospitalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231231123921_dbu")]
+    partial class dbu
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,6 +133,9 @@ namespace HospitalRandevu.Migrations
                     b.Property<DateOnly>("BirthDay")
                         .HasColumnType("date");
 
+                    b.Property<int?>("DoctorID")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("text");
@@ -154,7 +160,9 @@ namespace HospitalRandevu.Migrations
 
                     b.HasKey("UserID");
 
-                    b.ToTable("Users");
+                    b.HasIndex("DoctorID");
+
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Hospital_Randevu.Models.DoctorWorkTime", b =>
@@ -185,6 +193,18 @@ namespace HospitalRandevu.Migrations
                     b.Navigation("Doctor");
 
                     b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("Hospital_Randevu.Models.User", b =>
+                {
+                    b.HasOne("Hospital_Randevu.Models.Doctor", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("DoctorID");
+                });
+
+            modelBuilder.Entity("Hospital_Randevu.Models.Doctor", b =>
+                {
+                    b.Navigation("Patients");
                 });
 
             modelBuilder.Entity("Hospital_Randevu.Models.User", b =>

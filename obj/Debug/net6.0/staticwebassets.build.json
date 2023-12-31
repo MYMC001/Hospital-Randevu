@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3zj8xOM/fbfKbCzl6P07VR5EnxZ/P+c8JFc7h8RZFRM=",
+  "Hash": "GxhzP7youW/19fBSKTU4SHu6/ZXKDMzI+yD6LxJ7sGc=",
   "Source": "Hospital_Randevu",
   "BasePath": "_content/Hospital_Randevu",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Hospital_Randevu.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\Login.css",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\site.css",
@@ -528,6 +547,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\f612fe65-9def-4d17-9035-2dff29f9365f 2022-07-24.png"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\Happiest-Parent-and-Child.jpg",
+      "SourceId": "Hospital_Randevu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\",
+      "BasePath": "_content/Hospital_Randevu",
+      "RelativePath": "images/Happiest-Parent-and-Child.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Happiest-Parent-and-Child.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\healthcare.jpg",

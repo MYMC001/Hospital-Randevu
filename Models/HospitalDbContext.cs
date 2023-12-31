@@ -6,8 +6,9 @@ namespace Hospital_Randevu.Models
     {
 
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<DoctorWorkTime> DoctorWorkTimes { get; set; }
-        public DbSet<Patient> Patients { get; set; }
+        
         public DbSet<Reservation> Reservations { get; set; }    
 
         public  HospitalDbContext(DbContextOptions<HospitalDbContext> options) : base(options) { 

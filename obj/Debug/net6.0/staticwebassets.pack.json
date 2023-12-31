@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Hospital_Randevu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\css\\Style.css",
       "PackagePath": "staticwebassets\\css\\Style.css"
     },
@@ -63,6 +67,10 @@
     {
       "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\9349b9df-5c96-4060-a26d-a63368c698ff Screenshot (1).png",
       "PackagePath": "staticwebassets\\images\\9349b9df-5c96-4060-a26d-a63368c698ff Screenshot (1).png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\Happiest-Parent-and-Child.jpg",
+      "PackagePath": "staticwebassets\\images\\Happiest-Parent-and-Child.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\source\\repos\\Hospital_Randevu\\Hospital_Randevu\\wwwroot\\images\\aa2b1adf-3149-43d8-bd22-422735c1ba3e 26171296.jpg",
