@@ -93,29 +93,6 @@ namespace HospitalRandevu.Migrations
                     b.ToTable("DoctorWorkTimes");
                 });
 
-            modelBuilder.Entity("Hospital_Randevu.Models.Employee", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
-
-                    b.Property<int>("EmployeeEmail")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Employeename")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Employees");
-                });
-
             modelBuilder.Entity("Hospital_Randevu.Models.Reservation", b =>
                 {
                     b.Property<int>("reservationID")
@@ -127,13 +104,21 @@ namespace HospitalRandevu.Migrations
                     b.Property<int>("DoctorID")
                         .HasColumnType("integer");
 
-                    b.Property<int>("PatientID")
+                    b.Property<string>("ReservationDay")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<TimeSpan>("ReservationSaat")
+                        .HasColumnType("interval");
+
+                    b.Property<int>("UserID")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("ReservationDate")
-                        .HasColumnType("timestamp with time zone");
-
                     b.HasKey("reservationID");
+
+                    b.HasIndex("DoctorID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Reservations");
                 });
@@ -168,8 +153,8 @@ namespace HospitalRandevu.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
 
                     b.Property<string>("UserSurname")
                         .IsRequired()
@@ -190,6 +175,35 @@ namespace HospitalRandevu.Migrations
                         .IsRequired();
 
                     b.Navigation("Doctor");
+                });
+
+            modelBuilder.Entity("Hospital_Randevu.Models.Reservation", b =>
+                {
+                    b.HasOne("Hospital_Randevu.Models.Doctor", "Doctor")
+                        .WithMany("Reservations")
+                        .HasForeignKey("DoctorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hospital_Randevu.Models.User", "User")
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Hospital_Randevu.Models.Doctor", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("Hospital_Randevu.Models.User", b =>
+                {
+                    b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618
         }

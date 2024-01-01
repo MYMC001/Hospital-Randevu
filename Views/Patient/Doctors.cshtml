@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Hospital_Randevu.Models.Doctor>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    Layout = "_UserLayout";
+}
+<body class="p-body">
+    @foreach (var item in Model)
+    {
+        <div class="container_d">
+
+            <div class="doctor-card">
+
+                <div class="doc-info">
+
+                    <div class="d-image">
+                        <img src="../images/@Html.DisplayFor(modelItem => item.image)" style="width:120px ; height:120px " />
+                    </div>
+
+                    <div class="doc-info1">
+                        <div class="name">
+                            <p for="">Dr. <br><span>@item.FullName</span></p>
+
+                        </div>
+
+                        <div class="information">
+
+                            <div class="info-item">
+                                <p>@ViewData["specialty"]</p>
+                                <hr>
+                                <label for="">@item.specialty</label>
+                            </div>
+
+                            <div class="info-item">
+                                <p> @ViewData["Contact"] </p>
+                                <hr>
+                                <p>@item.PhoneNumber</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="reser">
+            <div class="switch">
+
+                <button class="rdbtn">
+                    <a asp-action="AddReservation" asp-controller="Reservation" style="display:flex" asp-route-id="@item.DoctorID">
+                        <span class="material-symbols-outlined">
+                            clinical_notes
+                        </span>Randevu Al
+                    </a>
+                </button>
+
+
+
+
+            </div> 
+        </div>
+    }
+</body>
+

@@ -1,6 +1,7 @@
 ﻿using Hospital_Randevu.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,10 +10,11 @@ namespace Hospital_Randevu.Controllers
     public class RegisterController : Controller
     {
         private readonly HospitalDbContext _context;
-
-        public RegisterController(HospitalDbContext context)
+        private readonly IStringLocalizer<DoctorController> _localizer;
+        public RegisterController(HospitalDbContext context    , IStringLocalizer<DoctorController> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
         //public IActionResult Doctors()
@@ -23,17 +25,34 @@ namespace Hospital_Randevu.Controllers
 
         public IActionResult LogUp()
         {
-            return View();
+
+            ViewData["Name"] = _localizer["Name"];
+            ViewData["UserName"] = _localizer["UserName"];
+			ViewData["Birth day"] = _localizer["Birth day"];
+			ViewData["Phone"] = _localizer["Phone"];
+			ViewData["Email"] = _localizer["Email"];
+			ViewData["Password"] = _localizer["Password"];
+			ViewData["Gender"] = _localizer["Gender"];
+			ViewData["Forward"] = _localizer["Forward"];
+
+
+
+
+			return View();
         }
 
-        public IActionResult Indexer()
+        public IActionResult Index()
         {
             return View();
         }
 
         public IActionResult Login()
         {
-            return View();
+			ViewData["Password"] = _localizer["Password"];
+			ViewData["Email"] = _localizer["Email"];
+			ViewData["Login"] = _localizer["Login"];
+			ViewData["SignUp"] = _localizer["SignUp"];
+			return View();
         }
 
         [HttpPost]
@@ -55,8 +74,10 @@ namespace Hospital_Randevu.Controllers
 				HttpContext.Session.SetString("Username", check.UserName);
 				var name = HttpContext.Session.GetString("Username");
 				ViewBag.Username = name;
-				return View("Indexer");
+				return View("Index");
 			}
+
+          
             ViewBag.err = "Not Found";
             return View();
 		}

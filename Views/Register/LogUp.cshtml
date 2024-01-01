@@ -12,55 +12,60 @@
 	<div class="login">
 
 		<div class="clinic">
-			<div class="logo"><img src="./images/central.png" alt=""></div>
-			<div class="gic"><span class="material-symbols-outlined">clinical_notes	</span> </div>
+			<div class="logo"><img src="../images/central.png" alt=""></div>
+			<div class="col-md-6 text-right">
+				@await Html.PartialAsync("_SelectLanguagePartial")
+			</div>
+			
 			<button class="link-login">  <a  asp-action="Login"  asp-controller="Register"><span class="material-symbols-outlined">navigate_before	</span></a> </button>
 		</div>
 		<div class="logup">
 			<div class="col-md-4">
+				<div class="gic"><span class="material-symbols-outlined">clinical_notes	</span> </div>
+
 				<form asp-action="LogUp">
 
-
+					
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<div class="form-group">
-						<span>*</span><label for="">Name:</label>
+						<span>*</span><label for="">@ViewData["Name"]:</label>
 
-						<input asp-for="UserName" class="form-control" placeholder="Name" />
+						<input asp-for="UserName" class="form-control" placeholder="@ViewData["Name"]" />
 						<span asp-validation-for="UserName" class="text-danger"></span>
 					</div>
 
 					<div class="form-group">
-						<span>*</span><label for="">UserName:</label>
-						<input asp-for="UserSurname" class="form-control" placeholder="LastName" />
+						<span>*</span><label for="">@ViewData["UserName"]:</label>
+						<input asp-for="UserSurname" class="form-control" placeholder="@ViewData["UserName"]" />
 						<span asp-validation-for="UserSurname" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<span>*</span><label for="">Birth Day:</label>
-						<input asp-for="BirthDay" class="form-control" placeholder="Birth Day" />
+						<span>*</span><label for="">@ViewData["Birth day"]:</label>
+						<input asp-for="BirthDay" class="form-control" placeholder="@ViewData["Birth day"]" />
 						<span asp-validation-for="BirthDay" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<span>*</span><label for="">Email:</label>
-						<input asp-for="Email" class="form-control" placeholder="Email" />
+						<span>*</span><label for="">@ViewData["Email"]:</label>
+						<input asp-for="Email" class="form-control" placeholder="@ViewData["Email"]" />
 						<span asp-validation-for="Email" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<span>*</span><label for="">Gender:</label>
-						<input asp-for="Gender" class="form-control" placeholder="Gender" />
+						<span>*</span><label for="">@ViewData["Gender"]:</label>
+						<input asp-for="Gender" class="form-control" placeholder="@ViewData["Gender"]" />
 						<span asp-validation-for="Gender" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<span>*</span><label for="">Phone:</label>
-						<input asp-for="Phone" class="form-control" placeholder="Phone Number" />
+						<span>*</span><label for="">@ViewData["Phone"]:</label>
+						<input asp-for="Phone" class="form-control" placeholder="@ViewData["Phone"]" />
 						<span asp-validation-for="Phone" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<span>*</span><label for="">Password:</label>
-						<input asp-for="Password" class="form-control" placeholder="Password" />
+						<span>*</span><label for="">@ViewData["Password"]:</label>
+						<input asp-for="Password" class="form-control" placeholder="@ViewData["Password"]" />
 						<span asp-validation-for="Password" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Forward >" class="btn btn-primary" />
+						<input type="submit" value="@ViewData["Forward"]" class="btn btn-primary" />
 					</div>
 
 				</form>

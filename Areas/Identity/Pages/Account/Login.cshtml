@@ -1,0 +1,83 @@
+﻿@page
+@model LoginModel
+
+
+<style>
+
+    .rowLogin {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+        .rowLogin form input {
+            margin-top: 20px;
+            border-bottom: solid red;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            outline: none;
+            border: none;
+        }
+
+        .rowLogin button {
+            margin-top: 10px;
+            border-raduis: 7px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: grey;
+            color: white;
+            border: none;
+        }
+
+        .rowLogin label {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    }
+</style>
+
+
+
+
+<body class="Login">
+
+    <div class="rowLogin row">
+        <div class="col-md-4">
+            <section>
+                <form id="account" method="post">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating">
+                        <input asp-for="Input.Email" class="form-control" />
+                        <label asp-for="Input.Email" class="form-label"></label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating">
+                        <input asp-for="Input.Password" class="form-control" />
+                        <label asp-for="Input.Password" class="form-label"></label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+
+                    <div>
+                        <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                    </div>
+                    <div>
+
+                        <p>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                        </p>
+
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+

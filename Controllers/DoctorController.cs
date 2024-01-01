@@ -1,19 +1,23 @@
 ﻿using Hospital_Randevu.Models;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.Extensions.Localization;
 
 namespace Hospital_Randevu.Controllers
 {
     public class DoctorController : Controller
     {
+        private readonly IStringLocalizer<DoctorController> _localizer;
         public HospitalDbContext _context;
         IWebHostEnvironment hostingenvironment;
-        public DoctorController(HospitalDbContext context  , IWebHostEnvironment getphoto)
+        public DoctorController(HospitalDbContext context  , IWebHostEnvironment getphoto, IStringLocalizer<DoctorController> localizer)
         {
             _context = context;
             hostingenvironment = getphoto;
+            _localizer = localizer ;
         }
-
+      
         public IActionResult ListDoctors(string search)
         {
          
@@ -23,11 +27,14 @@ namespace Hospital_Randevu.Controllers
        
         public IActionResult AddDoctor()
         {
+            @ViewData["Back to List"] = _localizer["Back to List"];
             return View();
         }
 
         public IActionResult PrintDoctor()
         {
+            ViewData["Contacts"] = _localizer["Contacts"];
+            ViewData["specialtys"] = _localizer["specialtys"];
             var fetch = _context.Doctors.ToList();
             return View(fetch);
         }
@@ -35,6 +42,13 @@ namespace Hospital_Randevu.Controllers
         {
              
             return View(_context.Doctors.FirstOrDefault(d => d.DoctorID == id));
+        }
+        public IActionResult TableReservation()
+        {
+
+
+
+            return View(_context.Reservations.ToList());
         }
         public IActionResult DeleteDoctor(int id)
         {

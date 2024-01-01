@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hospital_Randevu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a79d93b5b0e3266408488e62beec437d4a0a6b34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7d8739a11874d428326b42968fd0d36c56159ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hospital_Randevu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hospital_Randevu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -52,23 +52,27 @@
                 <a class="nav-link " href="#" ></a>
             </li> *@
            
-            <li class="nav-item">
+           @*  <li class="nav-item">
                 <a class="nav-link"  asp-controller="Patient"   asp-action="AddPatient">
                     <span class="material-symbols-outlined">
                         Save
                     </span>
                     SaveInfo
                 </a>
-            </li>
+            </li> *@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span class="material-symbols-outlined">
                         account_circle
                     </span>
-                    Profile
+                    @ViewBag.Username
                 </a>
             </li>
+            <div class="col-md-6 text-right">
+                @await Html.PartialAsync("_SelectLanguagePartial")
+            </div>
         </ul>
+     
         <div   class="btn-tugle">
             <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <span class="material-symbols-outlined">

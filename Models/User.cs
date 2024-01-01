@@ -9,7 +9,7 @@ namespace Hospital_Randevu.Models
         public int UserID { get; set; }
         [Display(Name = " Name ")]
         [Required(ErrorMessage = " Name  required")]
-        [StringLength(200)]
+        [StringLength(2000)]
 
         public string UserName { get; set;}
         [Display(Name = " sername ")]
@@ -37,7 +37,7 @@ namespace Hospital_Randevu.Models
 		[Display(Name = "Phone ")]
         [Required(ErrorMessage = " Phone  required")]
         public   string Phone { get; set; }    
-
+        public ICollection< Reservation> Reservations { get; set; }    
       
     }
 }

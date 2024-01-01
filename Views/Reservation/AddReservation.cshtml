@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "AddReservation";
+
     Layout = "_UserLayout";
 }
 
@@ -9,33 +10,52 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="AddReservation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <span class="material-symbols-outlined">
                 clinical_notes
             </span>
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-             
-                <select asp-for="PatientID" class ="form-control" asp-items="ViewBag.PatientID"></select>
+
+                <select asp-for="UserID" class="form-control" asp-items="ViewBag.UserID">
+
+                   <option selected>Select Patient</option>
+
+                        @foreach (var item in ViewBag.Getpatient)
+                        {
+                        <option value="@item.UserID">@item.UserID</option>
+                        }
+                  
+                </select>
             </div>
+            <div class="form-group">
+
+                <select asp-for="DoctorID" class="form-control" asp-items="ViewBag.DoctorID">
+                    <option selected>Select Doctor</option>
+                    @foreach (var item in ViewBag.Getdoc)
+                    {
+                        <option  value="@item.DoctorID">@item.FullName</option>
+                    }
+                </select>
+            </div>
+            
+         
             <div class="form-group">
                
-                <select asp-for="DoctorID" class ="form-control" asp-items="ViewBag.DoctorID"></select>
+                <input asp-for="ReservationSaat" class="form-control" />
+                <span asp-validation-for="ReservationSaat" class="text-danger"></span>
             </div>
             <div class="form-group">
-              
-                <input asp-for="ReservationDate" class="form-control" />
-                <span asp-validation-for="ReservationDate" class="text-danger"></span>
+             
+                <input asp-for="ReservationDay" class="form-control" />
+                <span asp-validation-for="ReservationDay" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Take" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Hospital_Randevu.Models.Reservation>
+
+@{
+    ViewData["Title"] = "TableReservation";
+    Layout = "_Layout";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationSaat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.UserID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationSaat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor.FullName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+                <td>
+                    <a asp-action="EditReservation" style="color:green ; text-decoration:none ;display:flex" asp-route-id="@item.reservationID">
+                        Edit<span class="material-symbols-outlined">
+                            edit
+                        </span>
+                    </a>
+
+
+                </td>
+                <td>
+                    <a asp-action="DeleteReservation" style="color:red ; text-decoration:none  ;display:flex" asp-route-id="@item.reservationID">
+                        Delete<span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

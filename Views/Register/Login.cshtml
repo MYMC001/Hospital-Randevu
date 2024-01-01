@@ -15,11 +15,8 @@
 
 		<div class="clinic">
 			<div class="logo"><img src="../images/central.png" alt=""></div>
-			<div class="select">
-				<select name="" id="">
-					<option value="">En<img src="./Flag_of_the_United_Kingdom_(1-2).svg" alt=""></option>
-					<option value="">Tr<img src="./Flag_of_Turkey.svg.png" alt=""></option>
-				</select>
+			<div class="col-md-6 text-right">
+				@await Html.PartialAsync("_SelectLanguagePartial")
 			</div>
 
 		</div>
@@ -32,7 +29,7 @@
 
 					<div class="form-item">
 						<span class="material-symbols-outlined">account_circle</span>
-						<input type="text" name="Email" placeholder="Email" asp-for="Email">
+						<input type="text" name="Email" placeholder="@ViewData["Email"]" asp-for="Email">
 						@* <span asp-validation-for="Email" class="text-danger"></span> *@
 					</div>
 
@@ -41,15 +38,15 @@
 					<div class="form-item">
 						
 						<span class="material-symbols-outlined">key</span>
-						<input type="password" name="Password" placeholder="Password" asp-for="Password">
+						<input type="password" name="Password" placeholder="@ViewData["Password"]" asp-for="Password">
 						@* <span asp-validation-for="Password" class="text-danger"></span> *@
 					</div>
 
-					
-						<input type="submit" value="Login" class="btn " />
+
+					<input type="submit" value="@ViewData["Login"]" class="btn " />
 					
 				</form>
-				<button class="btnUp"><a asp-action="LogUp" asp-controller="Register">LogUp</a></button>
+				<button class="btnUp"><a asp-action="LogUp" asp-controller="Register">SingUp</a></button>
 			
 				
  
